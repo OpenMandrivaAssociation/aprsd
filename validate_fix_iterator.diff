@@ -1,0 +1,23 @@
+diff -Naur aprsd-2.2.5.orig//src/validate.cpp aprsd-2.2.5/src/validate.cpp
+--- aprsd-2.2.5.orig//src/validate.cpp	2003-03-31 06:49:41.000000000 +0200
++++ aprsd-2.2.5/src/validate.cpp	2008-10-02 10:47:26.627790752 +0200
+@@ -225,7 +225,8 @@
+                 salt[i] = ppw->pw_passwd[i];
+ 
+         while ((i < 14) && (ppw->pw_passwd[i] != '$')) 
+-            salt[i++] = ppw->pw_passwd[i];
++            salt[i+1] = ppw->pw_passwd[i];
++            i++;
+ 
+         salt[i++] = '$';
+         salt[i] = '\0';
+@@ -265,7 +266,8 @@
+                     salt[i] = pspwd->sp_pwdp[i];
+ 
+             while ((i < 14) && (pspwd->sp_pwdp[i] != '$')) 
+-                salt[i++] = pspwd->sp_pwdp[i];
++                salt[i+1] = pspwd->sp_pwdp[i];
++                i++;
+ 
+             salt[i++] = '$';
+             salt[i] = '\0';

@@ -1,0 +1,24 @@
+diff -Nur aprsd-2.2.5-orig/src/aprsString.h aprsd-2.2.5/src/aprsString.h
+--- aprsd-2.2.5-orig/src/aprsString.h	2003-10-01 18:58:27.000000000 +0200
++++ aprsd-2.2.5/src/aprsString.h	2006-05-31 19:07:58.000000000 +0200
+@@ -196,7 +196,7 @@
+    void parseLogon(void);
+    bool parseCommand(void);
+    bool parsePortFilter(void);
+-   void aprsString::getMsgText(string& msg);
++   void getMsgText(string& msg);
+    void print(ostream& os);
+    string getAX25Source(void);
+    string getAX25Dest(void);
+diff -Nur aprsd-2.2.5-orig/src/servers.cpp aprsd-2.2.5/src/servers.cpp
+--- aprsd-2.2.5-orig/src/servers.cpp	2003-10-01 18:58:27.000000000 +0200
++++ aprsd-2.2.5/src/servers.cpp	2006-05-31 19:15:43.000000000 +0200
+@@ -3277,7 +3277,7 @@
+ 
+ //----------------------------------------------------------------------
+ 
+-inline string convertUpTime(int dTime)
++string convertUpTime(int dTime)
+ {
+     std::ostringstream ostr;
+     int x;

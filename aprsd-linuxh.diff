@@ -1,0 +1,22 @@
+diff -Nur aprsd-2.2.5.orig/src/aprsd.cpp aprsd-2.2.5/src/aprsd.cpp
+--- aprsd-2.2.5.orig/src/aprsd.cpp	2003-05-29 05:09:39.000000000 +0200
++++ aprsd-2.2.5/src/aprsd.cpp	2007-08-18 12:20:25.000000000 +0200
+@@ -59,7 +59,6 @@
+ 
+ #ifdef linux
+ #include <linux/kernel.h>
+-#include <linux/sys.h>
+ #endif
+ #include <sys/resource.h>
+ 
+diff -Nur aprsd-2.2.5.orig/src/servers.cpp aprsd-2.2.5/src/servers.cpp
+--- aprsd-2.2.5.orig/src/servers.cpp	2003-10-01 18:58:27.000000000 +0200
++++ aprsd-2.2.5/src/servers.cpp	2007-08-18 12:20:37.000000000 +0200
+@@ -46,7 +46,6 @@
+ 
+ #ifdef linux
+ #include <linux/kernel.h>
+-#include <linux/sys.h>
+ #endif
+ #include <sys/resource.h>
+ 

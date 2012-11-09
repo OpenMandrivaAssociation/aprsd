@@ -1,0 +1,144 @@
+diff -Nur aprsd-2.2.5.orig/src/aprsdassert.h aprsd-2.2.5/src/aprsdassert.h
+--- aprsd-2.2.5.orig/src/aprsdassert.h	2003-04-20 20:34:47.000000000 +0200
++++ aprsd-2.2.5/src/aprsdassert.h	2008-06-06 16:07:58.000000000 +0200
+@@ -28,6 +28,7 @@
+ 
+ #include "osdep.h"
+ #include <string>
++#include <cstring>
+ 
+ #ifndef DEBUG
+ #ifdef NDEBUG
+diff -Nur aprsd-2.2.5.orig/src/aprsdexception.h aprsd-2.2.5/src/aprsdexception.h
+--- aprsd-2.2.5.orig/src/aprsdexception.h	2003-04-20 20:34:47.000000000 +0200
++++ aprsd-2.2.5/src/aprsdexception.h	2008-06-06 16:08:09.000000000 +0200
+@@ -29,6 +29,7 @@
+ #include "osdep.h"
+ #include <exception>
+ #include <string>
++#include <cstring>
+ 
+ namespace aprsd
+ {
+diff -Nur aprsd-2.2.5.orig/src/aprsd.h aprsd-2.2.5/src/aprsd.h
+--- aprsd-2.2.5.orig/src/aprsd.h	2003-03-22 22:53:19.000000000 +0100
++++ aprsd-2.2.5/src/aprsd.h	2008-06-06 16:07:49.000000000 +0200
+@@ -4,6 +4,7 @@
+ #define APRSD_H
+ 
+ #include <string>
++#include <cstring>
+ 
+ #include "constant.h"
+ #include "cpqueue.h"
+diff -Nur aprsd-2.2.5.orig/src/aprsString.h aprsd-2.2.5/src/aprsString.h
+--- aprsd-2.2.5.orig/src/aprsString.h	2003-10-01 18:58:27.000000000 +0200
++++ aprsd-2.2.5/src/aprsString.h	2008-06-06 16:07:39.000000000 +0200
+@@ -28,6 +28,7 @@
+ 
+ #include <string>
+ #include <exception>
++#include <cstring>
+ 
+ #include "constant.h"
+ 
+diff -Nur aprsd-2.2.5.orig/src/constant.h aprsd-2.2.5/src/constant.h
+--- aprsd-2.2.5.orig/src/constant.h	2003-03-31 06:47:54.000000000 +0200
++++ aprsd-2.2.5/src/constant.h	2008-06-06 16:08:24.000000000 +0200
+@@ -27,6 +27,7 @@
+ #define CONSTANT_H
+ 
+ #include <string>
++#include <cstring>
+ #include "config.h"
+ 
+ 
+diff -Nur aprsd-2.2.5.orig/src/dupCheck.h aprsd-2.2.5/src/dupCheck.h
+--- aprsd-2.2.5.orig/src/dupCheck.h	2003-03-31 06:48:18.000000000 +0200
++++ aprsd-2.2.5/src/dupCheck.h	2008-06-06 16:08:47.000000000 +0200
+@@ -26,6 +26,7 @@
+ #define DUPCHECK_H
+ 
+ #include <string>
++#include <cstring>
+ 
+ #include "constant.h"
+ #include "aprsString.h"
+diff -Nur aprsd-2.2.5.orig/src/httpserver.cpp aprsd-2.2.5/src/httpserver.cpp
+--- aprsd-2.2.5.orig/src/httpserver.cpp	2003-05-11 06:38:34.000000000 +0200
++++ aprsd-2.2.5/src/httpserver.cpp	2008-06-06 17:43:09.000000000 +0200
+@@ -29,6 +29,7 @@
+ #include <cassert>
+  
+ #include <string>
++#include <cstdlib>
+ #include <list>
+ #include <iomanip>
+ 
+diff -Nur aprsd-2.2.5.orig/src/osdep.h aprsd-2.2.5/src/osdep.h
+--- aprsd-2.2.5.orig/src/osdep.h	2003-04-20 20:34:47.000000000 +0200
++++ aprsd-2.2.5/src/osdep.h	2008-06-06 16:09:30.000000000 +0200
+@@ -28,6 +28,7 @@
+ 
+ #include "config.h"
+ #include <string>
++#include <cstring>
+ 
+ extern "C"
+ {
+diff -Nur aprsd-2.2.5.orig/src/rf.h aprsd-2.2.5/src/rf.h
+--- aprsd-2.2.5.orig/src/rf.h	2003-05-18 03:50:25.000000000 +0200
++++ aprsd-2.2.5/src/rf.h	2008-06-06 16:09:44.000000000 +0200
+@@ -26,6 +26,8 @@
+ #define RF_H
+ 
+ #include <string>
++#include <cstring>
++
+ #include "constant.h"
+ 
+ extern int CloseReader, threadAck;
+diff -Nur aprsd-2.2.5.orig/src/serial.h aprsd-2.2.5/src/serial.h
+--- aprsd-2.2.5.orig/src/serial.h	2003-05-13 06:23:37.000000000 +0200
++++ aprsd-2.2.5/src/serial.h	2008-06-06 16:09:53.000000000 +0200
+@@ -27,6 +27,7 @@
+ #define SERIAL_H
+ 
+ #include <string>
++#include <cstring>
+ 
+ #include "constant.h"
+ 
+diff -Nur aprsd-2.2.5.orig/src/servers.h aprsd-2.2.5/src/servers.h
+--- aprsd-2.2.5.orig/src/servers.h	2003-10-01 18:58:27.000000000 +0200
++++ aprsd-2.2.5/src/servers.h	2008-06-06 16:10:04.000000000 +0200
+@@ -28,6 +28,7 @@
+ 
+ #include <string>
+ #include <sstream>
++#include <cstring>
+ 
+ #include "aprsd.h"
+ #include "mutex.h"
+diff -Nur aprsd-2.2.5.orig/src/utils.h aprsd-2.2.5/src/utils.h
+--- aprsd-2.2.5.orig/src/utils.h	2003-10-01 18:58:27.000000000 +0200
++++ aprsd-2.2.5/src/utils.h	2008-06-06 16:10:34.000000000 +0200
+@@ -27,6 +27,7 @@
+ #define UTILS_H
+ 
+ #include <string>
++#include <cstring>
+ #include <vector>
+ 
+ #include "constant.h"
+diff -Nur aprsd-2.2.5.orig/src/validate.h aprsd-2.2.5/src/validate.h
+--- aprsd-2.2.5.orig/src/validate.h	2003-03-31 06:49:41.000000000 +0200
++++ aprsd-2.2.5/src/validate.h	2008-06-06 16:10:46.000000000 +0200
+@@ -26,6 +26,7 @@
+ #define VALIDATE_H
+ 
+ #include <string>
++#include <cstring>
+ 
+ #define BADUSER -1
+ #define BADGROUP -2
