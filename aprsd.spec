@@ -4,7 +4,7 @@ Version:      2.2.5
 Release:      %mkrel 1
 License:      GPL, Other License(s), see package
 Group:        Networking/Other
-Url:          http://www.wa4dsy.net/aprs/
+Url:          https://www.wa4dsy.net/aprs/
 Source:       aprsd-2.2.5.tar.bz2
 Patch:        aprsd-2.2.5.diff
 Patch1:       aprsd-mic-e-pass.patch
