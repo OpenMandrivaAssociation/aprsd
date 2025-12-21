@@ -13,6 +13,11 @@ Patch3:       aprsd-2.2.5_for_11.0.diff
 Patch4:       validate_fix_iterator.diff
 
 
+BuildRequires:	autoconf
+BuildRequires:	automake
+BuildRequires:	libtool-base
+BuildRequires:	slibtool
+BuildRequires:	make
 %description
 This is an APRS Internet server program.  It acts as a gateway between
 the Internet and a local ham VHF APRS packet network. It is interfaced
