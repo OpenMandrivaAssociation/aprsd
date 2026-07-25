@@ -1,7 +1,7 @@
 Name:         aprsd
 Summary:      APRS Internet server program
 Version:      2.2.5
-Release:      %mkrel 1
+Release:      2
 License:      GPL, Other License(s), see package
 Group:        Networking/Other
 Url:          https://www.wa4dsy.net/aprs/
